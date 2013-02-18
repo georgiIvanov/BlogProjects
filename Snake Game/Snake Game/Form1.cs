@@ -113,7 +113,7 @@ namespace Snake_Game
 
             //for (int i = 0; i < snake.SnakeRec.Length; i++)
             
-            if(snake.SnakeRec[0].IntersectsWith(food.foodRec) && food.IsActive)
+            if(snake.SnakeRec[0].IntersectsWith(food.foodRec))
             {
                 score += 10;
                 snakeScorelbl.Text = Convert.ToString(score);

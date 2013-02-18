@@ -8,35 +8,30 @@ namespace Snake_Game
 {
     class Food
     {
-        private int x, y, width, height;
+        private int width, height;
         private SolidBrush brush;
         public Rectangle foodRec;
 
-        public bool IsActive { get; set; }
 
         public Food(Random randFood)
         {
-            x = randFood.Next(0, 29) * 10;
-            y = randFood.Next(0, 29) * 10;
-
             brush = new SolidBrush(Color.Red);
 
             width = 10;
             height = 10;
-            IsActive = true;
-            foodRec = new Rectangle(x, y, width, height);
+            foodRec = new Rectangle(randFood.Next(0, 29) * 10, randFood.Next(0, 29) * 10, width, height);
         }
 
         public void FoodLocation(Random randFood, Snake s)
         {
-            x = randFood.Next(0, 29) * 10;
-            y = randFood.Next(0, 29) * 10;
+            foodRec.X = randFood.Next(0, 29) * 10;
+            foodRec.Y = randFood.Next(0, 29) * 10;
             for (int i = 0; i < s.SnakeRec.Length; i++)
             {
                 if(this.foodRec.IntersectsWith(s.SnakeRec[i]))
                 {
-                    x = randFood.Next(0, 29) * 10;
-                    y = randFood.Next(0, 29) * 10;
+                    foodRec.X = randFood.Next(0, 29) * 10;
+                    foodRec.Y = randFood.Next(0, 29) * 10;
                     i = 0;
                 }
             }
@@ -44,8 +39,6 @@ namespace Snake_Game
 
         public void drawFood(Graphics paper)
         {
-            foodRec.X = x;
-            foodRec.Y = y;
 
             paper.FillRectangle(brush, foodRec);
         }
