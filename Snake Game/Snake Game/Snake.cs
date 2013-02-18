@@ -37,7 +37,7 @@ namespace Snake_Game
             }
         }
 
-        public void drawSnake()
+        public void moveSnake()
         {
             for (int i = snakeRec.Length - 1; i > 0; i--)
             {
@@ -47,22 +47,22 @@ namespace Snake_Game
 
         public void moveDown()
         {
-            drawSnake();
+            moveSnake();
             snakeRec[0].Y += 10;
         }
         public void moveUp()
         {
-            drawSnake();
+            moveSnake();
             snakeRec[0].Y -= 10;
         }
         public void moveRight()
         {
-            drawSnake();
+            moveSnake();
             snakeRec[0].X += 10;
         }
         public void moveLeft()
         {
-            drawSnake();
+            moveSnake();
             snakeRec[0].X -= 10;
         }
 
