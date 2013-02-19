@@ -7,6 +7,7 @@ namespace Snake_Game
 {
     static class Program
     {
+        // co
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
