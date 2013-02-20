@@ -114,18 +114,7 @@ namespace Snake_Game
             y = Y;
         }
 
-        //public BonusFood(Random randFood)
-        //{
-        //    x = randFood.Next(0, 29) * 10;
-        //    y = randFood.Next(0, 29) * 10;
 
-        //    brush = new SolidBrush(Color.Red);
-
-        //    width = 10;
-        //    height = 10;
-
-        //    foodRec = new Rectangle(x, y, width, height);
-        //}
 
        
 
