@@ -93,4 +93,9 @@ namespace Snake_Game
     {
         string NOHISTOYFORU;
     }
+
+    class BestClassEVER
+    {
+    }
+
 }

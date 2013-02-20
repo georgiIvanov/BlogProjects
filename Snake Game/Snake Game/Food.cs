@@ -75,12 +75,12 @@ namespace Snake_Game
 
         public void BonusFoodLocationDirection(Random randFood)
         {
-            x = randFood.Next(0, 29) * 10;
+            x = randFood.Next(0, 29) * 5;
             y = randFood.Next(0, 29) * 10;
 
             Direction = randFood.Next(1, 5);
 
-            this.DurationInMSec = randFood.Next(50, 80);
+            this.DurationInMSec = randFood.Next(20, 80);
         }
 
         public void MoveBonusFood()
@@ -114,18 +114,7 @@ namespace Snake_Game
             y = Y;
         }
 
-        //public BonusFood(Random randFood)
-        //{
-        //    x = randFood.Next(0, 29) * 10;
-        //    y = randFood.Next(0, 29) * 10;
 
-        //    brush = new SolidBrush(Color.Red);
-
-        //    width = 10;
-        //    height = 10;
-
-        //    foodRec = new Rectangle(x, y, width, height);
-        //}
 
        
 
