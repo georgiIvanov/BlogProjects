@@ -88,4 +88,9 @@ namespace Snake_Game
     {
 
     }
+
+    class SecondTestClass
+    {
+        string NOHISTOYFORU;
+    }
 }
