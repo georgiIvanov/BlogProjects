@@ -83,14 +83,4 @@ namespace Snake_Game
         }
 
     }
-
-    class testClass
-    {
-
-    }
-
-    class SecondTestClass
-    {
-        string NOHISTOYFORU;
-    }
 }
