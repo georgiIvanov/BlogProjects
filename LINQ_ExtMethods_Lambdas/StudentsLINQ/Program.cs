@@ -23,8 +23,53 @@ namespace StudentsLINQ
             {
                 Console.WriteLine(item.FirstName);
             }
+            Console.WriteLine();
 
-            
+            ///====================================================
+            ///Lambdas 
+            ///====================================================
+            foreach (var item in students.LexicographicallyBigger('i', x => x.FirstName))
+            {
+                Console.WriteLine(item.FirstName);
+            }
+            Console.WriteLine();
+
+
+            string[] veryImportantData = {"icecream", "cakes", "honey", "sweets", "rakiq" };
+
+            foreach (var item in veryImportantData.LexicographicallyBigger('e', x => x))
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+            //another way to write the query, produces same result,
+            //but the query stays in stack memory
+            IEnumerable<string> query = from data in veryImportantData
+                                        .LexicographicallyBigger('e', x => x)
+                                        select data;
+            foreach (var item in query)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+
+            //Complete nonsense from here on
+            IEnumerable<Student> notPersistantQuery = students.ThisWillHurt('i', DateTime.Now,
+                (x, date) => {
+                    if ((date.Minute & 1) == 0)
+                    {
+                        return x.FirstName;
+                    }
+                    else
+                        return x.FirstName[1].ToString();
+                });
+
+            foreach (var item in notPersistantQuery)
+            {
+                Console.WriteLine(item.FirstName);
+            }
         }
     }
 }

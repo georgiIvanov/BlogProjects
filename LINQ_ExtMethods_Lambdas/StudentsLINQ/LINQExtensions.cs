@@ -19,5 +19,27 @@ namespace StudentsLINQ
                 }
             }
         }
+
+        public static IEnumerable<T> LexicographicallyBigger<T>(this IEnumerable<T> objects, char ch, Func<T, string> predicate)
+        {
+            foreach (var item in objects)
+            {
+                if (predicate(item).ToLower()[0] > ch)
+                {
+                    yield return item;
+                }
+            }
+        }
+
+        public static IEnumerable<T> ThisWillHurt<T, DateTime>(this IEnumerable<T> objects, char ch, DateTime date, Func<T, DateTime, string> predicate)
+        {
+            foreach (var item in objects)
+            {
+                if (predicate(item, date).ToLower()[0] > ch)
+                {
+                    yield return item;
+                }
+            }
+        }
     }
 }
