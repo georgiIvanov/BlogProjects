@@ -1,1 +1,1 @@
-Simple C# projects.
+Blog related C# projects.
