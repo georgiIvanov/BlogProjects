@@ -55,6 +55,8 @@
     <Compile Include="AddMethod.cs" />
     <Compile Include="GetFromTable.cs" />
     <Compile Include="RemoveTests.cs" />
+    <Compile Include="GetEmumerables.cs" />
+    <Compile Include="ContainsMethods.cs" />
     <Compile Include="UpdateTests.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>

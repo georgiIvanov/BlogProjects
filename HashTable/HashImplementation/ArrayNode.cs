@@ -24,8 +24,6 @@ namespace HashImplementation
                     throw new ArgumentException("Such key already exists in collection.");
                 }
             }
-            
-
             items.Add(new KeyValuePair<K,V>(key, value));
         }
 
@@ -65,18 +63,6 @@ namespace HashImplementation
             }
 
             return found;
-        }
-
-        public KeyValuePair<K, V> this[int index]
-        {
-            get
-            {
-                return items[index];
-            }
-            set
-            {
-                this.items[index] = value;
-            }
         }
 
         public bool Remove(K key)

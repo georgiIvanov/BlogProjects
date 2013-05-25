@@ -70,7 +70,10 @@ namespace HashImplementation
         {
             foreach (var node in array)
             {
-                node.Clear();
+                if (node != null)
+                {
+                    node.Clear();
+                }
             }
         }
 
@@ -80,9 +83,12 @@ namespace HashImplementation
             {
                 foreach (var node in array)
                 {
-                    foreach (var value in node.Values)
+                    if (node != null)
                     {
-                        yield return value;
+                        foreach (var value in node.Values)
+                        {
+                            yield return value;
+                        }
                     }
                 }
             }
@@ -94,9 +100,12 @@ namespace HashImplementation
             {
                 foreach (var node in array)
                 {
-                    foreach (var key in node.Keys)
+                    if (node != null)
                     {
-                        yield return key;
+                        foreach (var key in node.Keys)
+                        {
+                            yield return key;
+                        }
                     }
                     
                 }
