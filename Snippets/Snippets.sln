@@ -7,6 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readLine.snippet = readLine.snippet
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C++", "C++", "{7C6E148C-689D-4850-AC46-CD49B3DF0F0F}"
+	ProjectSection(SolutionItems) = preProject
+		C++\cout.snippet = C++\cout.snippet
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
