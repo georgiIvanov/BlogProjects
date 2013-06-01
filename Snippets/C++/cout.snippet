@@ -11,13 +11,20 @@
 			</SnippetTypes>
 		</Header>
 		<Snippet>
-			<Declarations>
-				<Literal>
-        <Default>output</Default>
-				</Literal>
-			</Declarations>
+      <Declarations>
+        <Literal>
+          <ID>endl</ID>
+          <Default>endl;</Default>
+          <ToolTip>Ends line on console</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>text</ID>
+          <Default>text</Default>
+          <ToolTip>Output text</ToolTip>
+        </Literal>
+      </Declarations>
       <Code Language="cpp">
-        <![CDATA[cout<<"$end$"<<endl;]]>
+        <![CDATA[cout<<"$text$"<<$endl$]]>
       </Code>
 		</Snippet>
 	</CodeSnippet>
