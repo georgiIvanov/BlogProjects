@@ -1,0 +1,32 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>callbacks</Title>
+    <Author>Georgi Ivanov</Author>
+    <Shortcut>callb</Shortcut>
+    <Description>Code snippet for success and fail callback functions</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>data</ID>
+        <ToolTip>Data</ToolTip>
+        <Default>data</Default>
+      </Literal>
+      <Literal>
+        <ID>err</ID>
+        <ToolTip>Error</ToolTip>
+        <Default>err</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[function($data$){
+          console.log($data$);
+      },function($err$){
+          console.log($err$);
+      }]]>
+</Code>
+  </Snippet>
+</CodeSnippet>
